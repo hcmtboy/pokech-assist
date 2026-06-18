@@ -1031,6 +1031,45 @@ select:focus {
   text-underline-offset: 3px;
 }
 
+.learnable-title {
+  margin-top: 12px;
+}
+
+.learnable-move-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 6px;
+  max-height: 224px;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.learnable-move-chip {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 6px;
+  align-items: center;
+  min-height: 32px;
+  padding: 5px 6px;
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.learnable-move-chip .type {
+  min-width: 42px;
+  height: 22px;
+  font-size: 11px;
+}
+
+.learnable-empty {
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
 .rank {
   color: var(--muted);
   font-weight: 900;

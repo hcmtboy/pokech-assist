@@ -1,5 +1,15 @@
 window.POKECH_DETAILS = {
   "moves": {
+    "10まんばりき": {
+      "name": "10まんばりき",
+      "type": "じめん",
+      "description": "全身を使って相手に猛アタックする。",
+      "category": "物理",
+      "power": 95,
+      "accuracy": 95,
+      "pp": 10,
+      "priority": 0
+    },
     "10まんボルト": {
       "name": "10まんボルト",
       "type": "でんき",
@@ -50,6 +60,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "自分の防御と特防を下げる代わりに、強力な砲撃で攻撃する。"
     },
+    "アームハンマー": {
+      "name": "アームハンマー",
+      "type": "かくとう",
+      "category": "物理",
+      "power": 100,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "description": "強くて 重い こぶしを ふるって ダメージを 与える。 自分の 素早さが さがる。"
+    },
     "アイアンテール": {
       "name": "アイアンテール",
       "type": "はがね",
@@ -69,6 +89,16 @@ window.POKECH_DETAILS = {
       "pp": 15,
       "priority": 0,
       "description": "鋼の ような 硬い 頭で 攻撃する。 相手を ひるませることが ある。"
+    },
+    "アイアンローラー": {
+      "name": "アイアンローラー",
+      "type": "はがね",
+      "category": "物理",
+      "power": 130,
+      "accuracy": 100,
+      "pp": 5,
+      "priority": 0,
+      "description": "フィールドを 破壊しながら 攻撃。 なんらかの フィールド状態に 変わっていないと 技は 失敗する。"
     },
     "アイススピナー": {
       "name": "アイススピナー",
@@ -120,6 +150,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "軽やかなステップで攻撃し、自分の素早さを上げる。"
     },
+    "アクアテール": {
+      "name": "アクアテール",
+      "type": "みず",
+      "category": "物理",
+      "power": 90,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "description": "激しく あれくるう 荒波の ように 大きな しっぽを ふって 相手を 攻撃する。"
+    },
     "アクアブレイク": {
       "name": "アクアブレイク",
       "type": "みず",
@@ -129,6 +169,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "水の 力で 相手に ぶつかって 攻撃する。 相手の 防御を さげる ことがある。"
+    },
+    "アクアリング": {
+      "name": "アクアリング",
+      "type": "みず",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 0,
+      "description": "自分の 体の 周りを 水で つくった ベールで おおう。 毎ターン ＨＰを 回復する。"
     },
     "アクセルロック": {
       "name": "アクセルロック",
@@ -220,6 +270,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "２ー３ターンの 間 暴れまくって 相手を 攻撃する。 暴れたあとは 混乱する。"
     },
+    "あまいかおり": {
+      "name": "あまいかおり",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "香りで 相手の 回避率を がくっと さげる。"
+    },
     "あまえる": {
       "name": "あまえる",
       "type": "フェアリー",
@@ -229,6 +289,36 @@ window.POKECH_DETAILS = {
       "pp": 20,
       "priority": 0,
       "description": "かわいく みつめて 油断を 誘い 相手の 攻撃を がくっと さげる。"
+    },
+    "あまごい": {
+      "name": "あまごい",
+      "type": "みず",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "priority": 0,
+      "description": "５ターンの 間 雨を 降らせて みずタイプの 威力を あげる。 ほのおタイプの 威力は さがる。"
+    },
+    "あやしいひかり": {
+      "name": "あやしいひかり",
+      "type": "ゴースト",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "怪しい 光を 相手に みせて まどわせる。 相手を 混乱させる。"
+    },
+    "アロマミスト": {
+      "name": "アロマミスト",
+      "type": "フェアリー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 0,
+      "description": "不思議な アロマの 香りによって 味方の 特防を あげる。"
     },
     "アンコール": {
       "name": "アンコール",
@@ -240,6 +330,16 @@ window.POKECH_DETAILS = {
       "description": "相手に アンコールした 技を ３回 続けて 出させる。",
       "priority": 0
     },
+    "いえき": {
+      "name": "いえき",
+      "type": "どく",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "胃液を 相手の 体に 吐きつける。 ついた 胃液は 相手の 特性の 効果を 消す。"
+    },
     "イカサマ": {
       "name": "イカサマ",
       "type": "あく",
@@ -249,6 +349,16 @@ window.POKECH_DETAILS = {
       "pp": 15,
       "priority": 0,
       "description": "相手の 力を 利用する。 戦っている 相手の 攻撃が 高いほど ダメージが あがる。"
+    },
+    "いかりのこな": {
+      "name": "いかりのこな",
+      "type": "むし",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 2,
+      "description": "イライラさせる 粉を 自分に ふりかけて 注意を ひく。 相手の 攻撃を すべて 自分に むける。"
     },
     "いかりのまえば": {
       "name": "いかりのまえば",
@@ -270,6 +380,76 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "自分の ＨＰと 相手の ＨＰを あわせて それを 自分と 相手で なかよく わける。"
     },
+    "いちゃもん": {
+      "name": "いちゃもん",
+      "type": "あく",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "相手に いちゃもんを つけて 同じ 技を ２回連続で だせなくする。"
+    },
+    "いとをはく": {
+      "name": "いとをはく",
+      "type": "むし",
+      "category": "変化",
+      "power": null,
+      "accuracy": 95,
+      "pp": 40,
+      "priority": 0,
+      "description": "口から 吹きだした 糸を まきつけて 相手の 素早さを がくっと さげる。"
+    },
+    "いのちがけ": {
+      "name": "いのちがけ",
+      "type": "かくとう",
+      "category": "特殊",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "priority": 0,
+      "description": "命懸けで 相手を 攻撃する。 自分は ひんしに なるが 相手に ＨＰ分の ダメージを 与える。"
+    },
+    "いのちのしずく": {
+      "name": "いのちのしずく",
+      "type": "みず",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "不思議な 水を ふりまいて 自分と 場にいる 味方の ＨＰを 回復する。"
+    },
+    "いばる": {
+      "name": "いばる",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": 85,
+      "pp": 15,
+      "priority": 0,
+      "description": "相手を 怒らせて 混乱させる。 怒りで 相手の 攻撃は ぐーんと あがってしまう。"
+    },
+    "いびき": {
+      "name": "いびき",
+      "type": "ノーマル",
+      "category": "特殊",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "自分が 寝ているときに 雑音を だして 攻撃する。 相手を ひるませることが ある。"
+    },
+    "いやしのすず": {
+      "name": "いやしのすず",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "priority": 0,
+      "description": "心地好い 鈴の 音色を 聞かせて 味方 全員の 状態異常を 回復 する。"
+    },
     "いやしのねがい": {
       "name": "いやしのねがい",
       "type": "エスパー",
@@ -279,6 +459,26 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "自分は ひんしに なるが 控えから でてくる ポケモンの 状態異常と ＨＰを 回復する。"
+    },
+    "いやしのはどう": {
+      "name": "いやしのはどう",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "いやしのはどうを とばして 最大ＨＰの 半分 相手の ＨＰを 回復する。"
+    },
+    "いやなおと": {
+      "name": "いやなおと",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": 85,
+      "pp": 40,
+      "priority": 0,
+      "description": "おもわず 耳を ふさぎたくなる いやなおとを だして 相手の 防御を がくっと さげる。"
     },
     "いわなだれ": {
       "name": "いわなだれ",
@@ -330,6 +530,26 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "激しく 渦をまく 水の中に ４ー５ターンの 間 相手を 閉じこめて 攻撃する。"
     },
+    "うそなき": {
+      "name": "うそなき",
+      "type": "あく",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "ないた ふりをして 涙を 流す。 こまらせる ことで 相手の 特防を がくっと さげる。"
+    },
+    "うたう": {
+      "name": "うたう",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": 55,
+      "pp": 15,
+      "priority": 0,
+      "description": "心地好い きれいな 歌声を 聞かせて 相手を 眠り状態に する。"
+    },
     "うたかたのアリア": {
       "name": "うたかたのアリア",
       "type": "みず",
@@ -370,6 +590,26 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "つのを 突き刺して 相手の 養分を 吸い取る。 与えた ダメージの 半分の ＨＰを 回復できる。"
     },
+    "うっぷんばらし": {
+      "name": "うっぷんばらし",
+      "type": "あく",
+      "category": "物理",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 5,
+      "priority": 0,
+      "description": "相手への いらだちを ぶつけて 攻撃。 そのターンに 能力を さげられていると 技の 威力が ２倍に なる。"
+    },
+    "うらみ": {
+      "name": "うらみ",
+      "type": "ゴースト",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "相手が 最後に 使った技に 恨みを 抱いて その技の ＰＰを ４だけ 減らす。"
+    },
     "うらみつらみ": {
       "name": "うらみつらみ",
       "type": "ゴースト",
@@ -379,6 +619,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "相手への恨みをこめて攻撃し、相手の攻撃を下げることがある。"
+    },
+    "エアカッター": {
+      "name": "エアカッター",
+      "type": "ひこう",
+      "category": "特殊",
+      "power": 60,
+      "accuracy": 95,
+      "pp": 25,
+      "priority": 0,
+      "description": "鋭い 風で 相手を 切りつけて 攻撃する。 急所に 当たりやすい。"
     },
     "エアスラッシュ": {
       "name": "エアスラッシュ",
@@ -400,6 +650,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "自然から 集めた 命の力を 発射する。 相手の 特防を さげることがある。"
     },
+    "エレキネット": {
+      "name": "エレキネット",
+      "type": "でんき",
+      "category": "特殊",
+      "power": 55,
+      "accuracy": 95,
+      "pp": 15,
+      "priority": 0,
+      "description": "電気の ネットで 相手を 捕まえて 攻撃する。 相手の 素早さを さげる。"
+    },
     "エレキフィールド": {
       "name": "エレキフィールド",
       "type": "でんき",
@@ -409,6 +669,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "５ターンの 間 エレキフィールドにする。 地面にいる ポケモンは 眠らない。 でんきタイプの 威力が あがる。"
+    },
+    "エレキボール": {
+      "name": "エレキボール",
+      "type": "でんき",
+      "category": "特殊",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "電気の 塊を 相手に ぶつける。相手より 素早さが 速いほど 威力が あがる。"
     },
     "エレクトロビーム": {
       "name": "エレクトロビーム",
@@ -480,6 +750,46 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "自分は ひんしに なるが そのかわりに 相手の 攻撃と 特攻を がくっと さげる。"
     },
+    "おさきにどうぞ": {
+      "name": "おさきにどうぞ",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "priority": 0,
+      "description": "相手の 行動を サポートして 自分の 行動の あとに 続けて 動けるように する。"
+    },
+    "おたけび": {
+      "name": "おたけび",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 30,
+      "priority": 0,
+      "description": "おたけびを あげて 相手を 威嚇し 相手の 攻撃と 特攻を さげる。"
+    },
+    "おだてる": {
+      "name": "おだてる",
+      "type": "あく",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "相手を おだてて 混乱させる。 同時に 相手の 特攻も あげてしまう。"
+    },
+    "おちゃかい": {
+      "name": "おちゃかい",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "おちゃかいを ひらいて 場にいる ポケモンが それぞれ 持っている きのみを 食べる。"
+    },
     "おにび": {
       "name": "おにび",
       "type": "ほのお",
@@ -499,6 +809,26 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "倒れた味方が多いほど威力が上がる。"
+    },
+    "ガードシェア": {
+      "name": "ガードシェア",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "超能力で 自分と 相手の 防御と 特防を たして 半分に わける。"
+    },
+    "ガードスワップ": {
+      "name": "ガードスワップ",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "超能力で 自分と 相手の 防御と 特防の 能力変化を 入れ替える。"
     },
     "かいでんぱ": {
       "name": "かいでんぱ",
@@ -529,6 +859,16 @@ window.POKECH_DETAILS = {
       "pp": 15,
       "priority": 0,
       "description": "激しい 炎を 相手に 発射して 攻撃する。 やけど状態に することが ある。"
+    },
+    "かかとおとし": {
+      "name": "かかとおとし",
+      "type": "かくとう",
+      "category": "物理",
+      "power": 120,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "description": "かかと落としで攻撃する。外すと自分が大きなダメージを受ける。"
     },
     "かげうち": {
       "name": "かげうち",
@@ -569,6 +909,16 @@ window.POKECH_DETAILS = {
       "pp": 20,
       "priority": 0,
       "description": "相手の 動きを とめて 直前に だしていた 技を ４ターンの 間 使えなくする。"
+    },
+    "かふんだんご": {
+      "name": "かふんだんご",
+      "type": "むし",
+      "category": "特殊",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "敵には 爆発する だんごを 使って 攻撃。 味方には 回復する だんごを 与える。"
     },
     "かみくだく": {
       "name": "かみくだく",
@@ -700,6 +1050,26 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "気合を 高めて ありったけの 力を 放出する。 相手の 特防を さげることが ある。"
     },
+    "きあいだめ": {
+      "name": "きあいだめ",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "priority": 0,
+      "description": "深く 息を 吸い 気合を こめる。 自分の 攻撃が 急所に 当たりやすくなる。"
+    },
+    "きあいパンチ": {
+      "name": "きあいパンチ",
+      "type": "かくとう",
+      "category": "物理",
+      "power": 150,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": -3,
+      "description": "精神を 高めて パンチを くりだす。 技を だすまでに 攻撃を 受けると 失敗する。"
+    },
     "ギガインパクト": {
       "name": "ギガインパクト",
       "type": "ノーマル",
@@ -780,6 +1150,16 @@ window.POKECH_DETAILS = {
       "priority": 4,
       "description": "相手の 攻撃を 防ぐと 同時に 防御態勢になる。 触れた 相手の 攻撃を さげる。"
     },
+    "きんぞくおん": {
+      "name": "きんぞくおん",
+      "type": "はがね",
+      "category": "変化",
+      "power": null,
+      "accuracy": 85,
+      "pp": 40,
+      "priority": 0,
+      "description": "金属を こすって でるような いやな 音を 聞かせる。 相手の 特防を がくっと さげる。"
+    },
     "クイックターン": {
       "name": "クイックターン",
       "type": "みず",
@@ -810,6 +1190,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "草をかき分けるように攻撃し、自分の素早さを上げる。"
     },
+    "くすぐる": {
+      "name": "くすぐる",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "体を くすぐり 笑わせる ことで 相手の 攻撃と 防御を さげる。"
+    },
     "くちばしキャノン": {
       "name": "くちばしキャノン",
       "type": "ひこう",
@@ -819,6 +1209,26 @@ window.POKECH_DETAILS = {
       "pp": 15,
       "priority": -3,
       "description": "最初に クチバシを 加熱してから 攻撃を くりだす。 加熱中に さわると やけどする。"
+    },
+    "グラススライダー": {
+      "name": "グラススライダー",
+      "type": "くさ",
+      "category": "物理",
+      "power": 55,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "地面を 滑るように 相手を 攻撃。 グラスフィールドの時 必ず 先制攻撃 できる。"
+    },
+    "グラスフィールド": {
+      "name": "グラスフィールド",
+      "type": "くさ",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "５ターンの 間 グラスフィールドにする。 地面にいると 毎ターン 回復する。 くさタイプの 威力が あがる。"
     },
     "クラブハンマー": {
       "name": "クラブハンマー",
@@ -830,6 +1240,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "大きな ハサミを 相手に たたきつけて 攻撃する。 急所に 当たりやすい。"
     },
+    "クリアスモッグ": {
+      "name": "クリアスモッグ",
+      "type": "どく",
+      "category": "特殊",
+      "power": 50,
+      "accuracy": null,
+      "pp": 15,
+      "priority": 0,
+      "description": "特殊な 泥の 塊を 相手に 投げつけて 攻撃する。 能力変化を もとに もどす。"
+    },
     "くろいきり": {
       "name": "くろいきり",
       "type": "こおり",
@@ -839,6 +1259,16 @@ window.POKECH_DETAILS = {
       "pp": 30,
       "priority": 0,
       "description": "黒い霧を だして 戦闘に でている ポケモン 全員の 能力変化を もとに もどす。"
+    },
+    "くろいまなざし": {
+      "name": "くろいまなざし",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "priority": 0,
+      "description": "吸いこまれるような 黒い まなざしで じっと みつめて 相手を 戦闘から 逃げられなくする。"
     },
     "クロスチョップ": {
       "name": "クロスチョップ",
@@ -879,6 +1309,16 @@ window.POKECH_DETAILS = {
       "pp": 20,
       "priority": 0,
       "description": "足を 強く けり 相手を 転ばせて 攻撃する。 相手が 重いほど 威力が あがる。"
+    },
+    "ゲップ": {
+      "name": "ゲップ",
+      "type": "どく",
+      "category": "特殊",
+      "power": 120,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "description": "相手に 向かって ゲップを 浴びせて ダメージを 与える。 きのみを 食べないと だせない。"
     },
     "げんしのちから": {
       "name": "げんしのちから",
@@ -930,6 +1370,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "１ターンめで どこかに 消えて ２ターンめに 相手を 攻撃する。 守りを 無視して 攻撃できる。"
     },
+    "コーチング": {
+      "name": "コーチング",
+      "type": "かくとう",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "的確な 指導を おこなうことで 味方 全員の 攻撃と 防御を 上げる。"
+    },
     "こおりのいぶき": {
       "name": "こおりのいぶき",
       "type": "こおり",
@@ -960,6 +1410,16 @@ window.POKECH_DETAILS = {
       "priority": 1,
       "description": "氷の塊を 一瞬で つくり 相手に 素早く 放つ。 必ず 先制攻撃 できる。"
     },
+    "ゴールドラッシュ": {
+      "name": "ゴールドラッシュ",
+      "type": "はがね",
+      "category": "特殊",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 5,
+      "priority": 0,
+      "description": "大量のコインを投げつけて攻撃し、自分の特攻が下がる。"
+    },
     "こごえるかぜ": {
       "name": "こごえるかぜ",
       "type": "こおり",
@@ -980,6 +1440,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "宇宙から 神秘の 力を とりこむ ことで 自分の 防御と 特防を あげる。"
     },
+    "ゴッドバード": {
+      "name": "ゴッドバード",
+      "type": "ひこう",
+      "category": "物理",
+      "power": 140,
+      "accuracy": 90,
+      "pp": 5,
+      "priority": 0,
+      "description": "２ターン目に 相手を 攻撃する。 たまに ひるませる。 急所にも 当たりやすい。"
+    },
     "コットンガード": {
       "name": "コットンガード",
       "type": "くさ",
@@ -989,6 +1459,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "フワフワの 綿毛で 自分の 体を 包みこんで 守る。 防御を ぐぐーんと あげる。"
+    },
+    "このゆびとまれ": {
+      "name": "このゆびとまれ",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 2,
+      "description": "自分に 注目させて 相手からの 攻撃を すべて 自分に むけさせる。"
     },
     "コメットパンチ": {
       "name": "コメットパンチ",
@@ -1080,6 +1560,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "５ターンの間 地面にいると 先制技を 受けない。 エスパータイプの 威力が あがる。"
     },
+    "サイドチェンジ": {
+      "name": "サイドチェンジ",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "priority": 2,
+      "description": "不思議な 力で テレポートして 自分と 味方の 居場所を 入れ替える。"
+    },
     "さいはい": {
       "name": "さいはい",
       "type": "エスパー",
@@ -1100,6 +1590,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "眠気を 誘う 暗示を かけて 相手を 眠り状態に する。"
     },
+    "さきおくり": {
+      "name": "さきおくり",
+      "type": "あく",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "相手を おさえつけて 行動の 順番を 最後に する。"
+    },
     "さむいギャグ": {
       "name": "さむいギャグ",
       "type": "こおり",
@@ -1109,6 +1609,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "雪を降らせたあと、控えのポケモンと交代する。"
+    },
+    "さわぐ": {
+      "name": "さわぐ",
+      "type": "ノーマル",
+      "category": "特殊",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "３ターンの 間 騒いで 相手を 攻撃する。 そのあいだは だれも 眠れなくなる。"
     },
     "サンダーダイブ": {
       "name": "サンダーダイブ",
@@ -1170,6 +1680,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "潮を 吹きつけて 攻撃する。 自分の ＨＰが 少ないほど 技の 威力は さがる。"
     },
+    "じこあんじ": {
+      "name": "じこあんじ",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "自分に 暗示を かけることで 能力変化の 状態を 相手と 同じにする。"
+    },
     "じごくづき": {
       "name": "じごくづき",
       "type": "あく",
@@ -1209,6 +1729,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "description": "地震の 衝撃で 自分の 周りに いるものを 攻撃する。",
       "priority": 0
+    },
+    "じたばた": {
+      "name": "じたばた",
+      "type": "ノーマル",
+      "category": "物理",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "じたばた 暴れて 攻撃する。 自分の ＨＰが 少ないほど 技の 威力は あがる。"
     },
     "じだんだ": {
       "name": "じだんだ",
@@ -1280,6 +1810,36 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "爆発を おこして 自分の 周りに いるものを 攻撃する。 使ったあとに ひんしに なる。"
     },
+    "じばそうさ": {
+      "name": "じばそうさ",
+      "type": "でんき",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 0,
+      "description": "磁場を 操作 することによって 特性 プラスと マイナスの 防御 特防が あがる。"
+    },
+    "しびれごな": {
+      "name": "しびれごな",
+      "type": "くさ",
+      "category": "変化",
+      "power": null,
+      "accuracy": 75,
+      "pp": 30,
+      "priority": 0,
+      "description": "しびれる 粉を たくさん ふりまいて 相手を まひ状態に する。"
+    },
+    "しめつける": {
+      "name": "しめつける",
+      "type": "ノーマル",
+      "category": "物理",
+      "power": 15,
+      "accuracy": 85,
+      "pp": 20,
+      "priority": 0,
+      "description": "長い 体や つるなどを 使い ４ー５ターンの 間 相手を 締めつけて 攻撃する。"
+    },
     "ジャイロボール": {
       "name": "ジャイロボール",
       "type": "はがね",
@@ -1310,6 +1870,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "影から つくった 鋭い ツメで 相手を 切り裂く。 急所に 当たりやすい。"
     },
+    "シャドーパンチ": {
+      "name": "シャドーパンチ",
+      "type": "ゴースト",
+      "category": "物理",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 0,
+      "description": "影に まぎれて パンチを くりだす。 攻撃は 必ず 命中する。"
+    },
     "シャドーボール": {
       "name": "シャドーボール",
       "type": "ゴースト",
@@ -1339,6 +1909,16 @@ window.POKECH_DETAILS = {
       "pp": 20,
       "priority": 0,
       "description": "次の ターンに だす でんきタイプの 技の 威力を あげる。 自分の 特防も あがる。"
+    },
+    "じゅうりょく": {
+      "name": "じゅうりょく",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "priority": 0,
+      "description": "５ターンの間 ふゆうや ひこうタイプに じめんタイプの 技が 当たるようになる。 空中に 飛ぶ 技も 使えない。"
     },
     "じわれ": {
       "name": "じわれ",
@@ -1379,6 +1959,36 @@ window.POKECH_DETAILS = {
       "pp": 20,
       "priority": 0,
       "description": "みえない 不思議な 力を 送って 攻撃する。 相手を ひるませることが ある。"
+    },
+    "しんぴのまもり": {
+      "name": "しんぴのまもり",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 25,
+      "priority": 0,
+      "description": "５ターンの 間 不思議な 力に 守られて 状態異常に ならなくなる。"
+    },
+    "シンプルビーム": {
+      "name": "シンプルビーム",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "なぞの 念波を 相手に 送る。 念波を 受けとった 相手は 特性が たんじゅんに なる。"
+    },
+    "スイープビンタ": {
+      "name": "スイープビンタ",
+      "type": "ノーマル",
+      "category": "物理",
+      "power": 25,
+      "accuracy": 85,
+      "pp": 10,
+      "priority": 0,
+      "description": "硬い しっぽで 相手を たたいて 攻撃する。 ２ー５回の 間 連続で だす。"
     },
     "スキルスワップ": {
       "name": "スキルスワップ",
@@ -1450,6 +2060,46 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "とがった 岩を 相手に 突き刺して 攻撃する。 急所に 当たりやすい。"
     },
+    "すなあらし": {
+      "name": "すなあらし",
+      "type": "いわ",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "５ターンの 間 砂あらしで いわ じめん はがねタイプ 以外に ダメージ。 いわタイプの 特防が あがる。"
+    },
+    "すなじごく": {
+      "name": "すなじごく",
+      "type": "じめん",
+      "category": "物理",
+      "power": 35,
+      "accuracy": 85,
+      "pp": 15,
+      "priority": 0,
+      "description": "激しく 吹きあれる 砂あらしの 中に ４ー５ターンの 間 相手を 閉じこめて 攻撃する。"
+    },
+    "スピードスワップ": {
+      "name": "スピードスワップ",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "相手の 素早さと 自分の 素早さを 入れ替えてしまう。"
+    },
+    "スマートホーン": {
+      "name": "スマートホーン",
+      "type": "はがね",
+      "category": "物理",
+      "power": 70,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "とがった つので 相手を 突き刺して 攻撃する。 攻撃は 必ず 命中する。"
+    },
     "すりかえ": {
       "name": "すりかえ",
       "type": "あく",
@@ -1459,6 +2109,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "目にも とまらぬ 速さで 自分と 相手の 持ち物を 交換する。"
+    },
+    "せいちょう": {
+      "name": "せいちょう",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 0,
+      "description": "体を 一気に 大きく 生長させて 攻撃と 特攻を あげる。"
     },
     "せいなるつるぎ": {
       "name": "せいなるつるぎ",
@@ -1479,6 +2139,16 @@ window.POKECH_DETAILS = {
       "pp": 5,
       "priority": 0,
       "description": "相手を 一撃で 瀕死に する。 こおりタイプ 以外の ポケモンが 使うと 当たりにくい。"
+    },
+    "そうでん": {
+      "name": "そうでん",
+      "type": "でんき",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 0,
+      "description": "相手が 技を だす前に そうでん すると そのターン 相手の 技は でんきタイプになる。"
     },
     "ソウルビート": {
       "name": "ソウルビート",
@@ -1510,6 +2180,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "１ターン目に 光を いっぱいに 集め ２ターン目に その 力を 剣に 込めて 攻撃する。"
     },
+    "そらをとぶ": {
+      "name": "そらをとぶ",
+      "type": "ひこう",
+      "category": "物理",
+      "power": 90,
+      "accuracy": 95,
+      "pp": 15,
+      "priority": 0,
+      "description": "１ターン目で 空へ 飛び ２ターン目に 相手を 攻撃する。"
+    },
     "だいちのちから": {
       "name": "だいちのちから",
       "type": "じめん",
@@ -1520,6 +2200,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "相手の 足下へ 大地の力を 放出する。相手の 特防を さげることが ある。"
     },
+    "だいちのはどう": {
+      "name": "だいちのはどう",
+      "type": "ノーマル",
+      "category": "特殊",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "フィールドの力を 借りて 攻撃。 使った時の フィールドの状態に よって 技の タイプと 威力が 変わる。"
+    },
     "だいばくはつ": {
       "name": "だいばくはつ",
       "type": "ノーマル",
@@ -1529,6 +2219,26 @@ window.POKECH_DETAILS = {
       "pp": 5,
       "priority": 0,
       "description": "大きな 爆発で 自分の 周りに いるものを 攻撃する。 使ったあとに ひんしに なる。"
+    },
+    "ダイビング": {
+      "name": "ダイビング",
+      "type": "みず",
+      "category": "物理",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "１ターン目で 潜り ２ターン目に 浮きあがって 攻撃する。"
+    },
+    "だいふんげき": {
+      "name": "だいふんげき",
+      "type": "ほのお",
+      "category": "物理",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "荒れ狂う炎で2-3ターン攻撃し、その後混乱する。"
     },
     "だいもんじ": {
       "name": "だいもんじ",
@@ -1549,6 +2259,26 @@ window.POKECH_DETAILS = {
       "pp": 15,
       "priority": 0,
       "description": "すごい 勢いで 相手に つっこむ。 相手を ひるませることが ある。"
+    },
+    "だくりゅう": {
+      "name": "だくりゅう",
+      "type": "みず",
+      "category": "特殊",
+      "power": 90,
+      "accuracy": 85,
+      "pp": 10,
+      "priority": 0,
+      "description": "濁った 水を 相手に 発射して 攻撃する。 命中率を さげることが ある。"
+    },
+    "たくわえる": {
+      "name": "たくわえる",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 0,
+      "description": "力を 蓄えて 自分の 防御と 特防を あげる。 最大 ３回まで 蓄えられる。"
     },
     "ダストシュート": {
       "name": "ダストシュート",
@@ -1600,6 +2330,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "タネを 勢いよく 相手に 発射して 攻撃する。 ２ー５回の 間 連続で だす。"
     },
+    "ダブルアタック": {
+      "name": "ダブルアタック",
+      "type": "ノーマル",
+      "category": "物理",
+      "power": 35,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "description": "しっぽなどを 使い 相手を たたいて 攻撃する。 ２回連続で ダメージを 与える。"
+    },
     "ダブルウイング": {
       "name": "ダブルウイング",
       "type": "ひこう",
@@ -1609,6 +2349,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "翼を 相手に ぶつけて 攻撃する。 ２回連続で ダメージを 与える。"
+    },
+    "ダメおし": {
+      "name": "ダメおし",
+      "type": "あく",
+      "category": "物理",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "そのターンに 相手が すでに ダメージを 受けていたら 技の 威力は ２倍に なる。"
     },
     "ちいさくなる": {
       "name": "ちいさくなる",
@@ -1630,6 +2380,26 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "相手の 攻撃力と 同じだけ 自分の ＨＰを 回復する。 そして 相手の 攻撃を さげる。"
     },
+    "ちきゅうなげ": {
+      "name": "ちきゅうなげ",
+      "type": "かくとう",
+      "category": "物理",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "引力を 使い 投げとばす。 自分の レベルと 同じ ダメージを 相手に 与える。"
+    },
+    "チャージビーム": {
+      "name": "チャージビーム",
+      "type": "でんき",
+      "category": "特殊",
+      "power": 50,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "description": "電撃の 束を 相手に 発射する。電気を ためて 自分の 特攻を あげることが ある。"
+    },
     "ちょうのまい": {
       "name": "ちょうのまい",
       "type": "むし",
@@ -1649,6 +2419,16 @@ window.POKECH_DETAILS = {
       "pp": 20,
       "priority": 0,
       "description": "相手を 怒らせる。 ３ターンの 間 相手は ダメージを 与える 技しか だせなくなる。"
+    },
+    "ついばむ": {
+      "name": "ついばむ",
+      "type": "ひこう",
+      "category": "物理",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "くちばしで 攻撃。 相手が きのみを 持っているとき 食べて きのみの 効果を 受けられる。"
     },
     "ツインビーム": {
       "name": "ツインビーム",
@@ -1720,6 +2500,16 @@ window.POKECH_DETAILS = {
       "priority": 1,
       "description": "つぶらなひとみで 相手を みつめて 攻撃を さげる。 必ず 先制攻撃 できる。"
     },
+    "つぼをつく": {
+      "name": "つぼをつく",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "priority": 0,
+      "description": "つぼおしで 体を 活性化させる。 能力の どれか １つを ぐーんと あげる。"
+    },
     "つららおとし": {
       "name": "つららおとし",
       "type": "こおり",
@@ -1770,6 +2560,26 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "大きなハンマーで攻撃する。連続して使うことはできない。"
     },
+    "デコレーション": {
+      "name": "デコレーション",
+      "type": "フェアリー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "priority": 0,
+      "description": "かざりつけを することで 相手の 攻撃と 特攻を ぐーんと 上げる。"
+    },
+    "てだすけ": {
+      "name": "てだすけ",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 5,
+      "description": "仲間を 助ける。 てだすけ された ポケモンの 技の 威力は いつもより 大きくなる。"
+    },
     "てっていこうせん": {
       "name": "てっていこうせん",
       "type": "はがね",
@@ -1800,6 +2610,16 @@ window.POKECH_DETAILS = {
       "priority": 1,
       "description": "目にも 留まらぬ ものすごい 速さで 相手に つっこむ。 必ず 先制攻撃 できる。"
     },
+    "てんしのキッス": {
+      "name": "てんしのキッス",
+      "type": "フェアリー",
+      "category": "変化",
+      "power": null,
+      "accuracy": 75,
+      "pp": 10,
+      "priority": 0,
+      "description": "天使のように かわいく キスして 相手を 混乱させる。"
+    },
     "でんじは": {
       "name": "でんじは",
       "type": "でんき",
@@ -1820,6 +2640,26 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "電気で つくった 磁力の 力で 宙に 浮かぶ。 ５ターンの 間 浮遊できる。"
     },
+    "でんじほう": {
+      "name": "でんじほう",
+      "type": "でんき",
+      "category": "特殊",
+      "power": 120,
+      "accuracy": 50,
+      "pp": 5,
+      "priority": 0,
+      "description": "大砲の ような 電気を 発射して 攻撃する。 相手を まひの 状態に する。"
+    },
+    "とおせんぼう": {
+      "name": "とおせんぼう",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "priority": 0,
+      "description": "両手を ひろげて たちはだかり 相手の 逃げ道を ふさいで 逃げられなくする。"
+    },
     "トーチカ": {
       "name": "トーチカ",
       "type": "どく",
@@ -1829,6 +2669,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 4,
       "description": "相手の 攻撃を 防ぐと 同時に 触れた 相手に 毒を 与えてしまう。"
+    },
+    "とおぼえ": {
+      "name": "とおぼえ",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "priority": 0,
+      "description": "大声で ほえて 気合を 高め 自分と 味方の 攻撃を あげる。"
     },
     "どくづき": {
       "name": "どくづき",
@@ -1869,6 +2719,26 @@ window.POKECH_DETAILS = {
       "pp": 20,
       "priority": 0,
       "description": "毒の 混じった 糸を 吹き付ける。 相手を 毒にして 素早さを さげる。"
+    },
+    "どくのこな": {
+      "name": "どくのこな",
+      "type": "どく",
+      "category": "変化",
+      "power": null,
+      "accuracy": 75,
+      "pp": 35,
+      "priority": 0,
+      "description": "毒の ある 粉を たくさん ふりまいて 相手を 毒状態に する。"
+    },
+    "どくばりセンボン": {
+      "name": "どくばりセンボン",
+      "type": "どく",
+      "category": "物理",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "毒の針を大量に飛ばして攻撃する。相手が毒状態なら威力が上がる。"
     },
     "どくびし": {
       "name": "どくびし",
@@ -1950,6 +2820,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "相手に飛びついて攻撃し、相手の素早さを下げる。"
     },
+    "とびはねる": {
+      "name": "とびはねる",
+      "type": "ひこう",
+      "category": "物理",
+      "power": 85,
+      "accuracy": 85,
+      "pp": 5,
+      "priority": 0,
+      "description": "空高く 飛び跳ねて ２ターン目に 相手を 攻撃する。 まひ状態に することが ある。"
+    },
     "とびひざげり": {
       "name": "とびひざげり",
       "type": "かくとう",
@@ -1960,6 +2840,26 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "ジャンプからの ひざげりで 相手を 攻撃する。 はずすと 自分が ダメージを 受ける。"
     },
+    "ともえなげ": {
+      "name": "ともえなげ",
+      "type": "かくとう",
+      "category": "物理",
+      "power": 60,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": -6,
+      "description": "相手を 投げとばして 控えの ポケモンを ひきずりだす。 野生の 場合は 戦闘が 終わる。"
+    },
+    "トライアタック": {
+      "name": "トライアタック",
+      "type": "ノーマル",
+      "category": "特殊",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "３つの 光線で 攻撃する。 まひか やけどか こおり状態の どれかに することが ある。"
+    },
     "ドラゴンアロー": {
       "name": "ドラゴンアロー",
       "type": "ドラゴン",
@@ -1969,6 +2869,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "ドラメシヤで ２回 攻撃。 相手が ２匹 いるときは それぞれに １回ずつ 攻撃する。"
+    },
+    "ドラゴンエール": {
+      "name": "ドラゴンエール",
+      "type": "ドラゴン",
+      "category": "変化",
+      "power": 0,
+      "accuracy": 0,
+      "pp": 15,
+      "priority": 0,
+      "description": "味方を鼓舞して急所率を上げる。ドラゴンタイプには効果が大きい。"
     },
     "ドラゴンクロー": {
       "name": "ドラゴンクロー",
@@ -2049,6 +2959,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "３回連続で キックを くりだして 攻撃する。 技が 当たるたびに 威力は あがる。"
+    },
+    "ドリルくちばし": {
+      "name": "ドリルくちばし",
+      "type": "ひこう",
+      "category": "物理",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "回転しながら とがった くちばしを 相手に 突き刺して 攻撃する。"
     },
     "ドリルライナー": {
       "name": "ドリルライナー",
@@ -2140,6 +3060,26 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "暗黒の 衝撃波を とばして 相手を 攻撃する。 命中率を さげることが ある。"
     },
+    "ナイトヘッド": {
+      "name": "ナイトヘッド",
+      "type": "ゴースト",
+      "category": "特殊",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "恐ろしい 幻を みせて 自分の レベルと 同じだけの ダメージを 相手に 与える。"
+    },
+    "なかまづくり": {
+      "name": "なかまづくり",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "不思議な リズムで おどる。 動きを まねさせて 自分と 相手の 特性を 同じに する。"
+    },
     "なげつける": {
       "name": "なげつける",
       "type": "あく",
@@ -2160,6 +3100,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "怠けて やすむ。 自分の ＨＰを 最大ＨＰの 半分 回復する。"
     },
+    "なみだめ": {
+      "name": "なみだめ",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 0,
+      "description": "なみだめに なって 相手の 戦力を 喪失させる。 相手の 攻撃と 特攻が さがる。"
+    },
     "なみのり": {
       "name": "なみのり",
       "type": "みず",
@@ -2169,6 +3119,26 @@ window.POKECH_DETAILS = {
       "pp": 15,
       "priority": 0,
       "description": "大きな 波で 自分の 周りに いるものを 攻撃する。"
+    },
+    "なやみのタネ": {
+      "name": "なやみのタネ",
+      "type": "くさ",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "心を なやませる タネを 植えつける。 相手を 眠れなくして 特性を ふみんに する。"
+    },
+    "なりきり": {
+      "name": "なりきり",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "相手に なりきって 自分も 相手と 同じ 特性に 変化する。"
     },
     "ニードルガード": {
       "name": "ニードルガード",
@@ -2219,6 +3189,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 3,
       "description": "先制攻撃で 相手を ひるませる。 戦闘に でたら すぐに ださないと 成功しない。"
+    },
+    "ねごと": {
+      "name": "ねごと",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "自分が おぼえている 技の うち どれか １つを くりだす。 自分が 寝ているときだけ 使える。"
     },
     "ネズミざん": {
       "name": "ネズミざん",
@@ -2310,6 +3290,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "全身で 相手に のしかかり 攻撃する。 まひ状態に することが ある。"
     },
+    "のみこむ": {
+      "name": "のみこむ",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "蓄えた 力を のみこんで 自分の ＨＰを 回復する。 蓄えているほど 回復する。"
+    },
     "のろい": {
       "name": "のろい",
       "type": "ゴースト",
@@ -2329,6 +3319,46 @@ window.POKECH_DETAILS = {
       "pp": 15,
       "priority": 0,
       "description": "まくしたてる ように 怒鳴りつけて 相手の 特攻を さげる。"
+    },
+    "ハードプラント": {
+      "name": "ハードプラント",
+      "type": "くさ",
+      "category": "特殊",
+      "power": 150,
+      "accuracy": 90,
+      "pp": 5,
+      "priority": 0,
+      "description": "大きな 樹木で 相手を たたきつけて 攻撃する。 次の ターンは 動けなくなる。"
+    },
+    "ハードプレス": {
+      "name": "ハードプレス",
+      "type": "はがね",
+      "category": "物理",
+      "power": 0,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "相手を押しつぶして攻撃する。相手の残りHPが多いほど威力が上がる。"
+    },
+    "はいすいのじん": {
+      "name": "はいすいのじん",
+      "type": "かくとう",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "priority": 0,
+      "description": "自分の すべての 能力が 上がるが 交代 したり 逃げることが できなくなる。"
+    },
+    "ハイドロカノン": {
+      "name": "ハイドロカノン",
+      "type": "みず",
+      "category": "特殊",
+      "power": 150,
+      "accuracy": 90,
+      "pp": 5,
+      "priority": 0,
+      "description": "水の 大砲を 相手に 発射して 攻撃する。 次の ターンは 動けなくなる。"
     },
     "ハイドロポンプ": {
       "name": "ハイドロポンプ",
@@ -2350,6 +3380,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "うるさく 響く 大きな 振動を 相手に 与えて 攻撃する。"
     },
+    "はいよるいちげき": {
+      "name": "はいよるいちげき",
+      "type": "むし",
+      "category": "物理",
+      "power": 70,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "description": "背後から はいより 攻撃する。 相手の 特攻を さげる。"
+    },
     "はかいこうせん": {
       "name": "はかいこうせん",
       "type": "ノーマル",
@@ -2369,6 +3409,26 @@ window.POKECH_DETAILS = {
       "pp": 5,
       "priority": 0,
       "description": "すごい 力を 発揮して 相手を 攻撃する。自分の 攻撃と 防御が さがる。"
+    },
+    "はがねのつばさ": {
+      "name": "はがねのつばさ",
+      "type": "はがね",
+      "category": "物理",
+      "power": 70,
+      "accuracy": 90,
+      "pp": 25,
+      "priority": 0,
+      "description": "硬い 翼を 相手に たたきつけて 攻撃する。 自分の 防御が あがることが ある。"
+    },
+    "はきだす": {
+      "name": "はきだす",
+      "type": "ノーマル",
+      "category": "特殊",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "蓄えた 力を 相手に ぶつけて 攻撃する。 蓄えているほど 威力が あがる。"
     },
     "ばくおんぱ": {
       "name": "ばくおんぱ",
@@ -2410,6 +3470,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "相手の 持ち物を はたき 落として 戦闘が 終わるまで 使えなくする。 物を持つ 相手には ダメージが増す。"
     },
+    "はたく": {
+      "name": "はたく",
+      "type": "ノーマル",
+      "category": "物理",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "priority": 0,
+      "description": "長い しっぽや 手などを 使って 相手を はたいて 攻撃する。"
+    },
     "はどうだん": {
       "name": "はどうだん",
       "type": "かくとう",
@@ -2430,6 +3500,26 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "控えの ポケモンと 入れ替わる。 能力変化は 替わった ポケモンが そのまま 受けつぐ。"
     },
+    "はなびらのまい": {
+      "name": "はなびらのまい",
+      "type": "くさ",
+      "category": "特殊",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "２ー３ターンの 間 花を まきちらして 相手を 攻撃する。 まきちらした あとは 混乱する。"
+    },
+    "はなふぶき": {
+      "name": "はなふぶき",
+      "type": "くさ",
+      "category": "物理",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "激しい 花吹雪を 起こし 周りに いるものに 攻撃して ダメージを 与える。"
+    },
     "はねやすめ": {
       "name": "はねやすめ",
       "type": "ひこう",
@@ -2439,6 +3529,16 @@ window.POKECH_DETAILS = {
       "pp": 5,
       "priority": 0,
       "description": "地面に 降りて 体を やすめる。 最大ＨＰの 半分の ＨＰを 回復する。"
+    },
+    "ハバネロエキス": {
+      "name": "ハバネロエキス",
+      "type": "くさ",
+      "category": "変化",
+      "power": 0,
+      "accuracy": null,
+      "pp": 15,
+      "priority": 0,
+      "description": "相手の攻撃を大きく上げる代わりに、防御を大きく下げる。"
     },
     "はめつのひかり": {
       "name": "はめつのひかり",
@@ -2500,6 +3600,16 @@ window.POKECH_DETAILS = {
       "priority": 1,
       "description": "弾丸の ような 速くて 硬い パンチを 相手に くりだす。 必ず 先制攻撃 できる。"
     },
+    "ハロウィン": {
+      "name": "ハロウィン",
+      "type": "ゴースト",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "相手を ハロウィンに 誘う。 相手の タイプに ゴーストタイプが 追加される。"
+    },
     "パワーウィップ": {
       "name": "パワーウィップ",
       "type": "くさ",
@@ -2509,6 +3619,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "ツタや 触手を 激しく ふるって 相手を たたきつけ 攻撃する。"
+    },
+    "パワーシェア": {
+      "name": "パワーシェア",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "超能力で 自分と 相手の 攻撃と 特攻を たして 半分に わける。"
     },
     "パワージェム": {
       "name": "パワージェム",
@@ -2529,6 +3649,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "超能力で 自分と 相手の 攻撃と 特攻の 能力変化を 入れ替える。"
+    },
+    "パワートリック": {
+      "name": "パワートリック",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "ちょうのうりょくで じぶんの こうげきと ぼうぎょの ちからを こうかん する。"
     },
     "ヒートスタンプ": {
       "name": "ヒートスタンプ",
@@ -2559,6 +3689,16 @@ window.POKECH_DETAILS = {
       "pp": 15,
       "priority": 0,
       "description": "鋭い刃で攻撃し、相手の場にまきびしを設置する。"
+    },
+    "ひっくりかえす": {
+      "name": "ひっくりかえす",
+      "type": "あく",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "priority": 0,
+      "description": "相手に かかっている すべての 能力変化を ひっくり返して 逆にする。"
     },
     "ひゃっきやこう": {
       "name": "ひゃっきやこう",
@@ -2600,6 +3740,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "体に 力を こめて 筋肉を ぶあつく することで 自分の 攻撃と 防御を あげる。"
     },
+    "ファストガード": {
+      "name": "ファストガード",
+      "type": "かくとう",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "priority": 3,
+      "description": "自分と 味方を 相手の 先制攻撃から 守る。"
+    },
     "ふいうち": {
       "name": "ふいうち",
       "type": "あく",
@@ -2619,6 +3769,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "相手が 自分と 同じ 技を おぼえていたら 相手だけ その技を 使えなくする。"
+    },
+    "フェアリーロック": {
+      "name": "フェアリーロック",
+      "type": "フェアリー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "ロックを かけることによって 次のターン すべての ポケモンを 逃げられなくする。"
     },
     "フェイタルクロー": {
       "name": "フェイタルクロー",
@@ -2660,6 +3820,36 @@ window.POKECH_DETAILS = {
       "priority": -6,
       "description": "相手を 吹きとばして 控えの ポケモンを ひきずりだす。 野生の 場合は 戦闘が 終わる。"
     },
+    "ぶきみなじゅもん": {
+      "name": "ぶきみなじゅもん",
+      "type": "エスパー",
+      "category": "特殊",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 5,
+      "priority": 0,
+      "description": "強力な サイコパワーで 攻撃。 相手が 最後に 使った技の ＰＰを ３だけ 減らす。"
+    },
+    "ふくろだたき": {
+      "name": "ふくろだたき",
+      "type": "あく",
+      "category": "物理",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "味方 全員で 攻撃する。 仲間の ポケモンが 多いほど 技の 攻撃回数が 増える。"
+    },
+    "ふしょくガス": {
+      "name": "ふしょくガス",
+      "type": "どく",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 40,
+      "priority": 0,
+      "description": "強い 酸性の ガスで 周りに いるものを 包みこみ 持っている 道具を 溶かしてしまう。"
+    },
     "ぶちかまし": {
       "name": "ぶちかまし",
       "type": "じめん",
@@ -2679,6 +3869,36 @@ window.POKECH_DETAILS = {
       "pp": 5,
       "priority": 0,
       "description": "激しい 吹雪を 相手に 吹きつけて 攻撃する。 こおり状態に することが ある。"
+    },
+    "フライングプレス": {
+      "name": "フライングプレス",
+      "type": "かくとう",
+      "category": "物理",
+      "power": 100,
+      "accuracy": 95,
+      "pp": 10,
+      "priority": 0,
+      "description": "空中から 相手に ダイブする。 この技は かくとうタイプと 同時に ひこうタイプでも ある。"
+    },
+    "ブラストバーン": {
+      "name": "ブラストバーン",
+      "type": "ほのお",
+      "category": "特殊",
+      "power": 150,
+      "accuracy": 90,
+      "pp": 5,
+      "priority": 0,
+      "description": "爆発の 炎で 相手を 焼きつくして 攻撃する。 次の ターンは 動けなくなる。"
+    },
+    "フラフラダンス": {
+      "name": "フラフラダンス",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "フラフラと ダンスを おどって 自分の 周りに いるものを 混乱状態に させる。"
     },
     "フリーズドライ": {
       "name": "フリーズドライ",
@@ -2709,6 +3929,16 @@ window.POKECH_DETAILS = {
       "pp": 15,
       "priority": 0,
       "description": "炎を まとって 突進する。 自分も かなり ダメージを 受ける。 やけど状態に することが ある。"
+    },
+    "ブレイククロー": {
+      "name": "ブレイククロー",
+      "type": "ノーマル",
+      "category": "物理",
+      "power": 75,
+      "accuracy": 95,
+      "pp": 10,
+      "priority": 0,
+      "description": "硬く 鋭い ツメで 切り裂いて 攻撃する。 相手の 防御を さげることが ある。"
     },
     "ブレイズキック": {
       "name": "ブレイズキック",
@@ -2750,6 +3980,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "怒りを 爆発させて 相手を 攻撃する。 自分の ＨＰが 少ないほど 技の 威力は さがる。"
     },
+    "ぶんまわす": {
+      "name": "ぶんまわす",
+      "type": "あく",
+      "category": "物理",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "自分の 体を ぶんまわして 相手に ダメージを 与える。"
+    },
     "ヘドロウェーブ": {
       "name": "ヘドロウェーブ",
       "type": "どく",
@@ -2769,6 +4009,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "汚い ヘドロを 相手に 投げつけて 攻撃する。 毒状態に することが ある。"
+    },
+    "ベノムショック": {
+      "name": "ベノムショック",
+      "type": "どく",
+      "category": "特殊",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "特殊な 毒液を 浴びせかける。 毒状態の 相手には 威力が ２倍に なる。"
     },
     "ヘビーボンバー": {
       "name": "ヘビーボンバー",
@@ -2840,6 +4090,36 @@ window.POKECH_DETAILS = {
       "priority": -6,
       "description": "相手を 逃がして 控えの ポケモンを ひきずりだす。 野生の 場合は 戦闘が 終わる。"
     },
+    "ほおばる": {
+      "name": "ほおばる",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "持っている きのみを 食べて 防御を ぐーんと あげる。"
+    },
+    "ボーンラッシュ": {
+      "name": "ボーンラッシュ",
+      "type": "じめん",
+      "category": "物理",
+      "power": 25,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "description": "硬い ホネで 相手を なぐりつけて 攻撃する。 ２ー５回の 間 連続で だす。"
+    },
+    "ほしがる": {
+      "name": "ほしがる",
+      "type": "ノーマル",
+      "category": "物理",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "priority": 0,
+      "description": "かわいく あまえながら 相手に ちかづき 持っている 道具を うばう。"
+    },
     "ほっぺすりすり": {
       "name": "ほっぺすりすり",
       "type": "でんき",
@@ -2899,6 +4179,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "炎を まとい はばたいて 相手を 攻撃する。自分の 特攻が あがることが ある。"
+    },
+    "ほのおのムチ": {
+      "name": "ほのおのムチ",
+      "type": "ほのお",
+      "category": "物理",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "焼けたムチで 相手を 打ちつける。 攻撃を 受けた 相手は 防御が さがる。"
     },
     "ポルターガイスト": {
       "name": "ポルターガイスト",
@@ -2980,6 +4270,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "口から 吐きだす 特別 熱い 炎で 攻撃する。 相手の 特攻を さげる。"
     },
+    "マジックルーム": {
+      "name": "マジックルーム",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "まか不思議な 空間を つくる。 ５ターンの間 すべてのポケモンの 道具の 効果が なくなる。"
+    },
     "マッドショット": {
       "name": "マッドショット",
       "type": "じめん",
@@ -3020,6 +4320,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "直前に でた 技を まねして 同じ 技を だす。 技が でていないと 失敗する。"
     },
+    "まほうのこな": {
+      "name": "まほうのこな",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "まほうのこなを 浴びせて 相手を エスパータイプに 変化させる。"
+    },
     "まもる": {
       "name": "まもる",
       "type": "ノーマル",
@@ -3039,6 +4349,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "description": "自分の ＨＰを 少し 削って 分身を だす。 分身は 自分の 身代わりに なる。",
       "priority": 0
+    },
+    "みきり": {
+      "name": "みきり",
+      "type": "かくとう",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "priority": 4,
+      "description": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。"
     },
     "ミサイルばり": {
       "name": "ミサイルばり",
@@ -3130,6 +4450,26 @@ window.POKECH_DETAILS = {
       "priority": -5,
       "description": "相手から 受けた 特殊攻撃の ダメージを ２倍に して その相手に 返す。"
     },
+    "ミラータイプ": {
+      "name": "ミラータイプ",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "priority": 0,
+      "description": "相手の タイプを 反射して 自分も 同じ タイプに なる。"
+    },
+    "みらいよち": {
+      "name": "みらいよち",
+      "type": "エスパー",
+      "category": "特殊",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "description": "技を 使った ２ターン後に 相手に 念力の 塊を 送って 攻撃する。"
+    },
     "みわくのボイス": {
       "name": "みわくのボイス",
       "type": "フェアリー",
@@ -3169,6 +4509,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "振動で 音波を おこして 攻撃する。相手の 特防を さげることが ある。"
+    },
+    "むしのていこう": {
+      "name": "むしのていこう",
+      "type": "むし",
+      "category": "特殊",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "抵抗して 相手を 攻撃する。 相手の 特攻を さげる。"
     },
     "むねんのつるぎ": {
       "name": "むねんのつるぎ",
@@ -3220,6 +4570,26 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "技を だす前に 最後に 受けた 技の ダメージを 大きくして だした 相手に 返す。"
     },
+    "メテオビーム": {
+      "name": "メテオビーム",
+      "type": "いわ",
+      "category": "特殊",
+      "power": 120,
+      "accuracy": 90,
+      "pp": 10,
+      "priority": 0,
+      "description": "１ターン目に 宇宙の 力を 集めることで 特攻が あがり ２ターン目に 相手を 攻撃する。"
+    },
+    "メロメロ": {
+      "name": "メロメロ",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "♂なら♀を ♀なら♂を 誘惑して メロメロに する。 相手は 技が だしにくくなる。"
+    },
     "もえつきる": {
       "name": "もえつきる",
       "type": "ほのお",
@@ -3229,6 +4599,16 @@ window.POKECH_DETAILS = {
       "pp": 5,
       "priority": 0,
       "description": "全身の ほのおを すべて 燃やして 大ダメージを 与える。 自分の ほのおタイプが なくなる。"
+    },
+    "もりののろい": {
+      "name": "もりののろい",
+      "type": "くさ",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "相手に 森ののろいを かける。 のろいを かけられた 相手は タイプに くさタイプが 追加される。"
     },
     "もろはのずつき": {
       "name": "もろはのずつき",
@@ -3390,6 +4770,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "すっぱい りんごから つくりだした 酸性の 液体で 攻撃。 相手の 特防を 下げる。"
     },
+    "りんしょう": {
+      "name": "りんしょう",
+      "type": "ノーマル",
+      "category": "特殊",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "歌で 相手を 攻撃する。 みんなで 輪唱すると 続けて だすことが でき 威力も あがる。"
+    },
     "ルミナコリジョン": {
       "name": "ルミナコリジョン",
       "type": "エスパー",
@@ -3430,6 +4820,36 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "凍える ビームを 相手に 発射して 攻撃する。 こおり状態に することが ある。"
     },
+    "れんごく": {
+      "name": "れんごく",
+      "type": "ほのお",
+      "category": "特殊",
+      "power": 100,
+      "accuracy": 50,
+      "pp": 5,
+      "priority": 0,
+      "description": "激しい 炎で 相手を 包みこみ 攻撃する。 やけど状態に する。"
+    },
+    "ローキック": {
+      "name": "ローキック",
+      "type": "かくとう",
+      "category": "物理",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "priority": 0,
+      "description": "素早い 動きで 相手の 足を ねらって 攻撃する。 相手の 素早さを さげる。"
+    },
+    "ロックオン": {
+      "name": "ロックオン",
+      "type": "ノーマル",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "priority": 0,
+      "description": "照準を しっかり あわせて 次の 攻撃が 必ず 相手に 当たるように する。"
+    },
     "ロックカット": {
       "name": "ロックカット",
       "type": "いわ",
@@ -3450,6 +4870,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "硬い 岩石を 相手に 発射して 攻撃する。 ２ー５回の 間 連続で だす。"
     },
+    "ワイドガード": {
+      "name": "ワイドガード",
+      "type": "いわ",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 3,
+      "description": "味方全員に 当たる 攻撃を １ターンの 間 防ぐ。"
+    },
     "ワイドフォース": {
       "name": "ワイドフォース",
       "type": "エスパー",
@@ -3459,6 +4889,16 @@ window.POKECH_DETAILS = {
       "pp": 10,
       "priority": 0,
       "description": "サイコパワーで 相手を 攻撃する。 サイコフィールドの時 威力が あがり すべての 相手に ダメージを 与える。"
+    },
+    "ワイドブレイカー": {
+      "name": "ワイドブレイカー",
+      "type": "ドラゴン",
+      "category": "物理",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 15,
+      "priority": 0,
+      "description": "きょうじんな しっぽを 激しく ふりはらって 相手を 攻撃する。 相手の 攻撃を 下げる。"
     },
     "ワイルドボルト": {
       "name": "ワイルドボルト",
@@ -3470,6 +4910,16 @@ window.POKECH_DETAILS = {
       "priority": 0,
       "description": "電気を まとって 相手に ぶつかって 攻撃する。 自分も 少し ダメージを 受ける。"
     },
+    "わたほうし": {
+      "name": "わたほうし",
+      "type": "くさ",
+      "category": "変化",
+      "power": null,
+      "accuracy": 100,
+      "pp": 40,
+      "priority": 0,
+      "description": "綿のような フワフワの 胞子を まとわり つかせて 相手の 素早さを がくっと さげる。"
+    },
     "わるだくみ": {
       "name": "わるだくみ",
       "type": "あく",
@@ -3479,6 +4929,16 @@ window.POKECH_DETAILS = {
       "pp": 20,
       "priority": 0,
       "description": "悪いことを 考えて 頭を 活性化させる。 自分の 特攻を ぐーんと あげる。"
+    },
+    "ワンダールーム": {
+      "name": "ワンダールーム",
+      "type": "エスパー",
+      "category": "変化",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "description": "まか不思議な 空間を つくる。 ５ターンのあいだ すべてのポケモンの 防御と 特防が 入れ替わる。"
     }
   },
   "items": {

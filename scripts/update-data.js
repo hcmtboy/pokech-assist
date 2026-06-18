@@ -380,10 +380,64 @@ function extractUsage(text, moveDex) {
   };
 }
 
+function firstIndexAfter(text, tokens) {
+  const indexes = tokens.map((token) => text.indexOf(token)).filter((index) => index >= 0);
+  return indexes.length ? Math.min(...indexes) : -1;
+}
+
+function skipSpaces(text, index) {
+  let next = index;
+  while (/\s/.test(text[next] ?? "")) next += 1;
+  return next;
+}
+
+function moveRowEndIndex(text, index, name) {
+  if (!text.startsWith(name, index)) return -1;
+  let next = skipSpaces(text, index + name.length);
+  if (!text.startsWith(name, next)) return -1;
+  next = skipSpaces(text, next + name.length);
+  return /[-\d０-９]/.test(text[next] ?? "") ? next : -1;
+}
+
+function extractLearnableMoves(text, pokemonName, moveDex) {
+  const labels = [`${pokemonName}が覚える技`, `${formBaseName(pokemonName)}が覚える技`, "が覚える技"];
+  const label = labels.find((item) => text.includes(item));
+  if (!label) return [];
+
+  let chunk = text.slice(text.indexOf(label) + label.length);
+  const controlsEnd = chunk.indexOf("圧縮表示");
+  if (controlsEnd >= 0) chunk = chunk.slice(controlsEnd + "圧縮表示".length);
+  const end = firstIndexAfter(chunk, ["関連ページ", "この記事へ意見を送る", "コメント"]);
+  if (end >= 0) chunk = chunk.slice(0, end);
+
+  const moveNames = [...moveDex.keys()].sort((a, b) => b.length - a.length);
+  const moves = [];
+  const seen = new Set();
+  let index = 0;
+  while (index < chunk.length) {
+    const name = moveNames.find((candidate) => moveRowEndIndex(chunk, index, candidate) >= 0);
+    if (!name) {
+      index += 1;
+      continue;
+    }
+    if (!seen.has(name)) {
+      seen.add(name);
+      moves.push([name, moveDex.get(name)]);
+    }
+    index = moveRowEndIndex(chunk, index, name);
+  }
+  return moves;
+}
+
 async function scrapePokemonPage(entry, moveDex) {
   const html = await fetchHtml(entry.usageUrl);
   const text = stripTags(html);
   const usage = extractUsage(text, moveDex);
+  let learnableMoves = extractLearnableMoves(text, entry.name, moveDex);
+  if (!learnableMoves.length && entry.url && entry.url !== entry.usageUrl) {
+    const detailHtml = await fetchHtml(entry.url);
+    learnableMoves = extractLearnableMoves(stripTags(detailHtml), entry.name, moveDex);
+  }
 
   return {
     name: entry.name,
@@ -395,6 +449,7 @@ async function scrapePokemonPage(entry, moveDex) {
     singleRank: usage.singleRank,
     doubleRank: usage.doubleRank,
     moves: usage.moves,
+    learnableMoves,
     items: usage.items,
     abilities: usage.abilities,
   };

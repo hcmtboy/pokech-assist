@@ -257,6 +257,7 @@ function normalizePokemon(pokemon) {
     ...pokemon,
     types: pokemon.types.map(normalizeType),
     moves: (pokemon.moves ?? []).map(([name, rate, type]) => [name, rate, type ? normalizeType(type) : type]),
+    learnableMoves: (pokemon.learnableMoves ?? []).map(([name, type]) => [name, type ? normalizeType(type) : type]),
     items: pokemon.items ?? [],
     abilities: pokemon.abilities ?? [],
   };
@@ -970,6 +971,32 @@ function rankRows(list, category, withType = false) {
     .join("");
 }
 
+function allMoveEntries(pokemon) {
+  const entries = [];
+  const seen = new Set();
+  for (const [name, rate, type] of pokemon.moves ?? []) {
+    if (!name || seen.has(name)) continue;
+    seen.add(name);
+    entries.push([name, rate, type]);
+  }
+  for (const [name, type] of pokemon.learnableMoves ?? []) {
+    if (!name || seen.has(name)) continue;
+    seen.add(name);
+    entries.push([name, null, type]);
+  }
+  return entries;
+}
+
+function learnableMoveRows(list) {
+  if (!list.length) return `<div class="learnable-empty">未登録</div>`;
+  return list
+    .map(([name, type]) => `<div class="learnable-move-chip">
+      ${type ? typeBadge(type) : ""}
+      <button class="detail-trigger" type="button" data-detail-kind="moves" data-detail-name="${escapeHtml(name)}" ${type ? `data-detail-type="${escapeHtml(type)}"` : ""}>${escapeHtml(name)}</button>
+    </div>`)
+    .join("");
+}
+
 function detailFor(kind, name, fallbackType) {
   const detail = DETAIL_DATA[kind]?.[name] ?? { name };
   return kind === "moves" && fallbackType && !detail.type ? { ...detail, type: fallbackType } : detail;
@@ -1222,7 +1249,7 @@ function uniqueSorted(values) {
 
 function updateSearchDatalists() {
   const searchNames = uniqueSorted(searchCandidates().map((pokemon) => partyNameFor(pokemon)));
-  const moveNames = uniqueSorted(POKEMON.flatMap((pokemon) => (pokemon.moves ?? []).map(([name]) => name)));
+  const moveNames = uniqueSorted(POKEMON.flatMap((pokemon) => allMoveEntries(pokemon).map(([name]) => name)));
   const abilityNames = uniqueSorted(POKEMON.flatMap((pokemon) => (pokemon.abilities ?? []).map(([name]) => name)));
   document.querySelector("#searchPokemonCandidates").innerHTML = searchNames.map((name) => `<option value="${escapeHtml(name)}"></option>`).join("");
   document.querySelector("#searchMoveCandidates").innerHTML = moveNames.map((name) => `<option value="${escapeHtml(name)}"></option>`).join("");
@@ -1242,7 +1269,7 @@ function filteredSearchResults() {
         : state.searchTypes.every((type) => variant.types.includes(type)),
     );
     const nameMatched = !nameQuery || partyNameFor(pokemon).includes(nameQuery) || pokemon.name.includes(nameQuery);
-    const moveMatched = !moveQuery || variants.some((variant) => variant.moves.some(([name]) => name.includes(moveQuery)));
+    const moveMatched = !moveQuery || variants.some((variant) => allMoveEntries(variant).some(([name]) => name.includes(moveQuery)));
     const abilityMatched = !abilityQuery || variants.some((variant) => variant.abilities.some(([name]) => name.includes(abilityQuery)));
     const matchupMatched = state.searchMatchupFilters.every((filter) =>
       variants.some((variant) => multiplier(filter.attackType, variant.types) === Number(filter.rate)),
@@ -1406,6 +1433,7 @@ function renderSearchDetail() {
   const matchup = matchupBuckets(pokemon.types);
   document.querySelector("#searchPokemonMatchups").innerHTML = groupedMatchups([...matchup.weak, ...matchup.resist, ...matchup.immune]);
   document.querySelector("#searchMoveList").innerHTML = rankRows(pokemon.moves, "moves", true);
+  document.querySelector("#searchLearnableMoveList").innerHTML = learnableMoveRows(pokemon.learnableMoves ?? []);
   document.querySelector("#searchItemList").innerHTML = rankRows(pokemon.items, "items");
   document.querySelector("#searchAbilityList").innerHTML = rankRows(pokemon.abilities, "abilities");
 }

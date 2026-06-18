@@ -136,6 +136,11 @@ async function addUsedDetails(details) {
       details.moves[name] ??= { name };
       if (type && !details.moves[name].type) details.moves[name].type = type;
     }
+    for (const [name, type] of pokemon.learnableMoves ?? []) {
+      if (!name) continue;
+      details.moves[name] ??= { name };
+      if (type && !details.moves[name].type) details.moves[name].type = type;
+    }
     for (const [name] of pokemon.items ?? []) {
       if (!name) continue;
       details.items[name] ??= { name };
@@ -217,12 +222,36 @@ function applyFallbackDetails(details) {
     ゆきげしき: "天気を雪にする。こおりタイプの防御が上がる。",
     ルミナコリジョン: "精神に作用する光で攻撃し、相手の特防を大きく下げる。",
     レイジングブル: "荒々しく突進して攻撃する。壁やオーロラベールを破壊する。使うポケモンによってタイプが変わる。",
+    "10まんばりき": "全身を使って相手に猛アタックする。",
+    かかとおとし: "かかと落としで攻撃する。外すと自分が大きなダメージを受ける。",
+    ゴールドラッシュ: "大量のコインを投げつけて攻撃し、自分の特攻が下がる。",
+    だいふんげき: "荒れ狂う炎で2-3ターン攻撃し、その後混乱する。",
+    どくばりセンボン: "毒の針を大量に飛ばして攻撃する。相手が毒状態なら威力が上がる。",
+    ドラゴンエール: "味方を鼓舞して急所率を上げる。ドラゴンタイプには効果が大きい。",
+    ハードプレス: "相手を押しつぶして攻撃する。相手の残りHPが多いほど威力が上がる。",
+    ハバネロエキス: "相手の攻撃を大きく上げる代わりに、防御を大きく下げる。",
   };
 
   Object.entries(moveDescriptions).forEach(([name, description]) => {
     if (details.moves[name] && !(details.moves[name].description || details.moves[name].effect)) {
       details.moves[name].description = description;
     }
+  });
+  const moveFallbacks = {
+    "10まんばりき": { type: "じめん", category: "物理", power: 95, accuracy: 95, pp: 10, priority: 0 },
+    かかとおとし: { type: "かくとう", category: "物理", power: 120, accuracy: 90, pp: 10, priority: 0 },
+    ゴールドラッシュ: { type: "はがね", category: "特殊", power: 120, accuracy: 100, pp: 5, priority: 0 },
+    だいふんげき: { type: "ほのお", category: "物理", power: 120, accuracy: 100, pp: 10, priority: 0 },
+    どくばりセンボン: { type: "どく", category: "物理", power: 60, accuracy: 100, pp: 10, priority: 0 },
+    ドラゴンエール: { type: "ドラゴン", category: "変化", power: null, accuracy: null, pp: 15, priority: 0 },
+    ハードプレス: { type: "はがね", category: "物理", power: null, accuracy: 100, pp: 10, priority: 0 },
+    ハバネロエキス: { type: "くさ", category: "変化", power: null, accuracy: null, pp: 15, priority: 0 },
+  };
+  Object.entries(moveFallbacks).forEach(([name, fallback]) => {
+    if (!details.moves[name]) return;
+    Object.entries(fallback).forEach(([key, value]) => {
+      if (details.moves[name][key] === undefined || details.moves[name][key] === "") details.moves[name][key] = value;
+    });
   });
   if (details.items["ようせいのハネ"] && !(details.items["ようせいのハネ"].description || details.items["ようせいのハネ"].effect)) {
     details.items["ようせいのハネ"].category = "タイプ強化";
