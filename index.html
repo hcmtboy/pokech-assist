@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Champions Assist Tool</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="toolbar" aria-label="pokemon controls">
+        <div class="brand">
+          <img class="mark" src="./asset/logo.png" alt="" />
+          <div>
+            <h1>Pokemon Champions Assist Tool</h1>
+            <p>シングルバトル補助</p>
+          </div>
+        </div>
+
+        <nav class="app-tabs" aria-label="app tabs">
+          <button class="active" type="button" data-tab-target="battleView">対戦補助</button>
+          <button type="button" data-tab-target="searchView">ポケモン検索</button>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="テーマ切替">Dark</button>
+        <datalist id="pokemonList"></datalist>
+        <datalist id="searchPokemonCandidates"></datalist>
+        <datalist id="searchMoveCandidates"></datalist>
+        <datalist id="searchAbilityCandidates"></datalist>
+      </section>
+
+      <div id="battleView" class="tab-view active">
+      <section class="section-block party-section">
+        <header class="section-heading">
+          <span>①</span>
+          <h2>パーティ情報</h2>
+          <button id="resetParties" class="section-action" type="button">リセット</button>
+        </header>
+
+        <div class="party-preset-bars">
+          <div class="party-preset-bar enemy-preset">
+            <span>相手保存</span>
+            <select id="enemyPresetSelect" aria-label="保存済み相手パーティ"></select>
+            <button id="saveEnemyPreset" type="button">保存</button>
+            <button id="loadEnemyPreset" type="button">読込</button>
+            <button id="deleteEnemyPreset" type="button">削除</button>
+          </div>
+          <div class="party-preset-bar ally-preset">
+            <span>味方保存</span>
+            <select id="allyPresetSelect" aria-label="保存済み味方パーティ"></select>
+            <button id="saveAllyPreset" type="button">保存</button>
+            <button id="loadAllyPreset" type="button">読込</button>
+            <button id="deleteAllyPreset" type="button">削除</button>
+          </div>
+        </div>
+
+        <div class="team-panels" aria-label="pokemon teams">
+          <section class="party-panel enemy-party" aria-label="enemy party">
+            <div class="party-head">
+            <div>
+              <h3>敵6体</h3>
+            </div>
+            </div>
+            <div class="party-slots" id="enemySlots"></div>
+            <div class="party-matchup-card matchup-grid-card">
+              <div id="enemyTypeGrid" class="type-matchup-grid"></div>
+            </div>
+            <div class="selected-summary">
+              <div id="enemySelectedList" class="selected-list"></div>
+              <div id="enemySelectedTypeGrid" class="type-matchup-grid"></div>
+            </div>
+          </section>
+
+          <section class="party-panel ally-party" aria-label="ally party">
+            <div class="party-head">
+            <div>
+              <h3>味方6体</h3>
+            </div>
+            </div>
+            <div class="party-slots" id="partySlots"></div>
+            <div class="party-matchup-card matchup-grid-card">
+              <div id="allyTypeGrid" class="type-matchup-grid"></div>
+            </div>
+            <div class="selected-summary">
+              <div id="allySelectedList" class="selected-list"></div>
+              <div id="allySelectedTypeGrid" class="type-matchup-grid"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="battle-grid">
+        <section class="section-block">
+          <header class="section-heading">
+            <span>②</span>
+            <h2>相手ポケモン</h2>
+          </header>
+
+          <article class="panel opponent-panel">
+          <header class="panel-head">
+            <div>
+              <h2 id="opponentName">-</h2>
+              <div id="opponentTypes" class="type-row"></div>
+              <div id="opponentMegaSwitch" class="variant-switch"></div>
+            </div>
+            <div class="panel-actions">
+              <label class="select inline-select">
+                <select id="opponentSelect"></select>
+              </label>
+            </div>
+          </header>
+
+          <div class="opponent-grid">
+            <section class="opponent-main">
+              <div class="section-title">ステータス</div>
+              <div class="table-wrap">
+                <table class="stat-table">
+                  <thead>
+                    <tr>
+                      <th>実数値</th>
+                      <th>特化</th>
+                      <th>32振り</th>
+                      <th>無振り</th>
+                      <th>下降</th>
+                    </tr>
+                  </thead>
+                  <tbody id="opponentStats"></tbody>
+                </table>
+              </div>
+
+              <div class="section-title">タイプ相性</div>
+              <div class="matchup-block single">
+                <div id="opponentWeakness" class="chip-list"></div>
+              </div>
+            </section>
+
+            <section class="opponent-usage">
+              <div class="usage-stack">
+                <div class="usage-card moves-card">
+                  <p class="sub-title">技 TOP10</p>
+                  <ol id="moveList" class="rank-list"></ol>
+                </div>
+                <div class="usage-side">
+                  <div class="usage-card">
+                    <p class="sub-title">持ち物 TOP5</p>
+                    <ol id="itemList" class="rank-list compact-list"></ol>
+                  </div>
+                  <div class="usage-card">
+                    <p class="sub-title">特性使用率</p>
+                    <ol id="abilityList" class="rank-list compact-list"></ol>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          </article>
+        </section>
+
+        <section class="section-block">
+          <header class="section-heading">
+            <span>③</span>
+            <h2>自分ポケモン、素早さ比較</h2>
+          </header>
+
+          <div class="lower-grid">
+          <article class="panel side-panel ally-panel">
+            <header class="panel-head">
+              <div>
+                <h2 id="allyName">-</h2>
+                <div id="allyTypes" class="type-row"></div>
+                <div id="allyMegaSwitch" class="variant-switch"></div>
+              </div>
+              <div class="panel-actions">
+                <label class="select inline-select">
+                  <select id="allySelect"></select>
+                </label>
+              </div>
+            </header>
+
+            <div class="section-title">ステータス</div>
+            <div class="table-wrap">
+              <table class="stat-table">
+                <thead>
+                  <tr>
+                    <th>実数値</th>
+                    <th>特化</th>
+                    <th>32振り</th>
+                    <th>無振り</th>
+                    <th>下降</th>
+                  </tr>
+                </thead>
+                <tbody id="allyStats"></tbody>
+              </table>
+            </div>
+
+            <div class="section-title">タイプ相性</div>
+            <div class="matchup-block single">
+              <div>
+                <p class="sub-title">被ダメージ倍率</p>
+                <div id="allyWeakness" class="chip-list"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel compare-panel">
+            <header class="mini-head">
+              <h3>素早さ比較グラフ</h3>
+            </header>
+            <div id="speedScale" class="speed-legend"></div>
+            <div id="speedCompare" class="speed-graph"></div>
+            <div class="speed-tables">
+              <div>
+                <div class="section-title">相手素早さライン</div>
+                <div class="speed-lines opponent-lines" id="opponentSpeedLines"></div>
+              </div>
+              <div>
+                <div class="section-title">味方素早さライン</div>
+                <div class="speed-lines ally-lines" id="allySpeedLines"></div>
+              </div>
+            </div>
+          </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block type-chart-section">
+        <header class="section-heading">
+          <span>④</span>
+          <h2>タイプ相性表</h2>
+        </header>
+        <div class="panel type-chart-panel">
+          <div id="typeChartTable" class="type-chart-table"></div>
+        </div>
+      </section>
+      </div>
+
+      <div id="searchView" class="tab-view">
+        <section class="section-block">
+          <header class="section-heading">
+            <span>⑤</span>
+            <h2>ポケモン検索</h2>
+          </header>
+          <div class="panel search-panel">
+            <div class="search-layout">
+              <section class="search-controls">
+                <div id="searchTypeFilters" class="search-type-filters"></div>
+                <div class="search-control-row">
+                  <label class="search-toggle">
+                    <span>OR検索</span>
+                    <input id="searchTypeOr" type="checkbox" />
+                  </label>
+                  <button id="addMatchupFilter" class="matchup-filter-button" type="button">+ タイプ相性の検索条件を追加</button>
+                  <button id="openDetailEditor" class="matchup-filter-button" type="button">詳細データ登録</button>
+                </div>
+                <div id="searchMatchupFilters" class="search-matchup-filters"></div>
+                <div class="search-input-grid">
+                  <input id="pokemonSearchInput" type="search" list="searchPokemonCandidates" placeholder="ポケモンで絞り込む......" autocomplete="off" />
+                  <input id="moveSearchInput" type="search" list="searchMoveCandidates" placeholder="わざで絞り込む......" autocomplete="off" />
+                  <input id="abilitySearchInput" type="search" list="searchAbilityCandidates" placeholder="とくせいで絞り込む......" autocomplete="off" />
+                </div>
+                <div id="searchFilterTags" class="search-filter-tags"></div>
+              </section>
+              <section class="search-results-panel">
+                <div class="search-result-meta"><span id="pokemonSearchCount">0件</span></div>
+                <div id="pokemonSearchList" class="search-list"></div>
+              </section>
+              <article class="search-detail">
+                <header class="panel-head">
+                  <div>
+                    <h2 id="searchPokemonName">-</h2>
+                    <div id="searchPokemonTypes" class="type-row"></div>
+                    <div id="searchPokemonVariants" class="variant-switch"></div>
+                  </div>
+                </header>
+                <div class="opponent-grid search-pokemon-grid">
+                  <section class="opponent-main">
+                    <div class="section-title">ステータス</div>
+                    <div class="table-wrap">
+                      <table class="stat-table">
+                        <thead>
+                          <tr>
+                            <th>実数値</th>
+                            <th>特化</th>
+                            <th>32振り</th>
+                            <th>無振り</th>
+                            <th>下降</th>
+                          </tr>
+                        </thead>
+                        <tbody id="searchPokemonStats"></tbody>
+                      </table>
+                    </div>
+                    <div class="section-title">タイプ相性</div>
+                    <div id="searchPokemonMatchups" class="chip-list"></div>
+                  </section>
+                  <section class="opponent-usage">
+                    <div class="usage-stack search-usage">
+                      <div class="usage-card moves-card">
+                        <p class="sub-title">技 TOP10</p>
+                        <ol id="searchMoveList" class="rank-list"></ol>
+                      </div>
+                      <div class="usage-side">
+                        <div class="usage-card">
+                          <p class="sub-title">持ち物 TOP5</p>
+                          <ol id="searchItemList" class="rank-list compact-list"></ol>
+                        </div>
+                        <div class="usage-card">
+                          <p class="sub-title">特性使用率</p>
+                          <ol id="searchAbilityList" class="rank-list compact-list"></ol>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="detailPopover" class="detail-popover" hidden></div>
+    <dialog id="detailEditor" class="detail-editor">
+      <form id="detailEditorForm" method="dialog">
+        <div class="detail-editor-head">
+          <h2>詳細データ登録</h2>
+          <button type="button" data-detail-editor-close aria-label="閉じる">×</button>
+        </div>
+        <div class="detail-editor-grid">
+          <label>
+            <span>カテゴリ</span>
+            <select id="detailKindInput">
+              <option value="moves">技</option>
+              <option value="items">持ち物</option>
+              <option value="abilities">特性</option>
+            </select>
+          </label>
+          <label>
+            <span>名前</span>
+            <input id="detailNameInput" type="text" required />
+          </label>
+          <label class="move-detail-field">
+            <span>タイプ</span>
+            <select id="detailTypeInput">
+              <option value="">-</option>
+              <option value="ノーマル">ノーマル</option>
+              <option value="ほのお">ほのお</option>
+              <option value="みず">みず</option>
+              <option value="でんき">でんき</option>
+              <option value="くさ">くさ</option>
+              <option value="こおり">こおり</option>
+              <option value="かくとう">かくとう</option>
+              <option value="どく">どく</option>
+              <option value="じめん">じめん</option>
+              <option value="ひこう">ひこう</option>
+              <option value="エスパー">エスパー</option>
+              <option value="むし">むし</option>
+              <option value="いわ">いわ</option>
+              <option value="ゴースト">ゴースト</option>
+              <option value="ドラゴン">ドラゴン</option>
+              <option value="あく">あく</option>
+              <option value="はがね">はがね</option>
+              <option value="フェアリー">フェアリー</option>
+            </select>
+          </label>
+          <label class="move-detail-field">
+            <span>分類</span>
+            <select id="detailCategoryInput">
+              <option value="">-</option>
+              <option value="物理">物理</option>
+              <option value="特殊">特殊</option>
+              <option value="変化">変化</option>
+            </select>
+          </label>
+          <label class="move-detail-field">
+            <span>威力</span>
+            <input id="detailPowerInput" type="number" min="0" />
+          </label>
+          <label class="move-detail-field">
+            <span>命中</span>
+            <input id="detailAccuracyInput" type="number" min="0" max="100" />
+          </label>
+          <label class="move-detail-field">
+            <span>PP</span>
+            <input id="detailPpInput" type="number" min="0" />
+          </label>
+          <label class="move-detail-field">
+            <span>優先度</span>
+            <input id="detailPriorityInput" type="number" />
+          </label>
+          <label class="detail-editor-wide">
+            <span>説明</span>
+            <textarea id="detailDescriptionInput" rows="5"></textarea>
+          </label>
+        </div>
+        <div class="detail-editor-actions">
+          <button id="deleteDetailData" type="button">登録削除</button>
+          <button type="submit">保存</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./data/pokemon-data.js"></script>
+    <script src="./data/detail-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
